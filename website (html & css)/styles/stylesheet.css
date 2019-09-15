@@ -1,0 +1,704 @@
+/*
+Start aanpassingen standaard bootstrap styling
+*/
+.btn{
+  background-color: #463F3A;
+  color: #F4F3EE;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.btn:hover{
+  color:white;
+  box-shadow: 0px 0px 5px 0px #000;
+}
+input[type=text]:hover,input[type=text]:focus{
+  box-shadow: 0px 0px 3px 0px #999;
+}
+a{
+  color: #88B04B;
+  font-weight:500;
+}
+a:hover{
+  color:#88B04B;
+}
+.page-item.active .page-link{
+  background-color:#88B04B;
+  border-color:#88B04B;
+}
+.page-link{
+  color:#88B04B;
+  font-weight:bold;
+}
+.page-link:hover{
+  color:#88B04B;
+}
+@media all and (max-width:450px){
+  .pagination.justify-content-center li:first-child,.pagination.justify-content-center li:last-child{
+    display:none;
+  }
+}
+/*
+Einde aanassingen standaard bootstrap styling
+*/
+
+/*
+Start aanpassing slider plugin styling
+*/
+.slider-handle{
+  background:none !important;
+  background-color:#88B04B !important;
+}
+.slider.slider-horizontal{
+  width:100%!important;
+}
+/*
+Einde aanpassing slider plugin styling
+*/
+
+.navbar-light{
+background-color: #88B04B;
+}
+
+.item-inner{
+background-color: #88B04B;
+width: 100%;
+height: 30%;
+font-weight:normal;
+}
+
+.item{
+background:rgb(224,223,218);
+transition: transform .2s;
+height: 400px;
+width: 300px;
+color:black;
+}
+
+.item:hover{
+  color:black;
+  text-decoration: none;
+transform: scale(1.05);
+}
+
+.bid-btn{
+  border-radius:0px 0px 10px 10px !important;
+}
+
+.bg-taupe{
+  background-color: #463F3A;
+}
+
+body{
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+#Logo {
+width: 60px;
+}
+
+.page-container{
+width: 80%;
+align-self: center;
+background-color: #F4F3EE;
+}
+
+.dragscroll{
+overflow-x: scroll;
+overflow-y: hidden;
+}
+
+.img-container{
+  width: 100%;
+  height: 50%;
+  background-color: white;
+}
+
+.img{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+  object-fit: contain;
+}
+
+.item-inner > .btn{
+  height: 20%;
+}
+
+.item-showcase{
+  border: 1px solid #463F3A;
+}
+
+.highest-bid{
+  background-color:#E3F988;
+  padding-left: 2%;
+  padding-right: 2%;
+  text-align: center;
+  height: 38%;
+}
+
+.registreerBiedWin{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.control-label:after {
+  content:"*";
+  color:red;
+}
+
+.bg-mindaro{
+  background-color: #E3F988;
+}
+
+tr:not(:last-child){
+ border-bottom: 1px solid #463F3A;
+}
+
+.filling{
+  width: 50vw;
+  min-width: 520px;
+
+}
+
+@media only screen and (max-width: 576px) {
+  .item{
+  width: 240px;
+  height: 320px;
+  font-size: 0.80em;
+  }
+  .filling{
+    flex: 1;
+    min-width: 0;
+    width: auto;
+  }
+
+ 
+
+}
+
+
+.fullCategory .dropdown-menu.show{
+  max-width: 100vw;
+  left: 0 !important;
+}
+
+/*
+Styling van zoeken op de homepage
+*/
+.zoekenOutside{
+  background: #F4F3EE;
+}
+
+input[type=text].zoektypen{
+  width:60%;
+}
+.zoekenOutside div.zoektypen{
+  width:40% !important;
+}
+
+.zoektypen{
+  border: none;
+  background: #FFF;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.zoektypen > .btn{
+border: none;
+background: #FFF;
+color:black;
+}
+
+.zoektypen > .btn:hover{
+color:black;
+box-shadow: 0px 0px 3px 0px #999;
+}
+
+.zoektypen > .btn:active{
+color:black;
+box-shadow: 0px 0px 3px 0px #999;
+}
+
+
+
+@media only screen and (max-width: 992px){
+  .zoekenOutside{
+    padding-top:0px!important;
+  }
+  .zoekenOutside > div.w-50{
+    width:100%!important;
+    margin:0!important;
+    max-width:496px;
+  }
+  .zoekenOutside > div.w-50 .d-flex{
+    flex-flow: column wrap;
+  }
+
+  .fullCategory .dropdown-menu.show{
+    max-width: 100vw;
+    min-width: 410px !important;
+    left: -110px !important;
+  }
+
+  input[type=text].zoektypen{
+    width:100%!important;
+    margin-bottom:20px!important;
+  }
+  .zoekenOutside div.zoektypen{
+    width:100%!important;
+  }
+  .reg-bied-win-img > img{
+    width: 100%!important;
+    max-width: 794px;
+  }
+}
+/* Einde styling van zoeken op de homepage */
+
+/* Start aanpassingen aan de styling van de product shocase en registreren bieden en win img */
+@media (max-width: 450px){
+  .reg-bied-win-img > img{
+    display:none !important;
+  }
+  .page-container{
+    width:100%;
+  }
+
+  
+
+
+  .item-showcase{
+    max-width:350px;
+    margin:auto!important;
+  }
+}
+/* Einde */
+
+.item-showcased{
+  margin: 2vh;
+}
+.resultatenpagina{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: white;
+}
+
+/* Styling filter aanpassingen op de producten pagina start */
+.filter{
+  height:40px;
+  position: relative;
+  overflow:hidden;
+}
+.filter.active{
+  height:auto;
+  overflow:visible;
+}
+.filter > img:hover{
+  cursor: pointer;
+}
+.filter > img{
+  position:absolute;
+  padding:20px 20px;
+  right:-10px;
+  top:0px;
+}
+.filter.active > .filter-hide-img{
+  display:block;
+}
+.filter.active > .filter-show-img{
+  display:none;
+}
+.filter > .filter-hide-img{
+  display:none;
+}
+.filter > .filter-show-img{
+  display:block;
+}
+@media all and (max-width:1000px){
+  .filter-holder{
+    width:100%!important;;
+    border-bottom:1px solid #ccc;
+  }
+}
+@media all and (max-width:1440px) and (min-width:1000px){
+  #price_slider_holder > div.d-flex{
+    flex-flow:wrap column !important;
+  }
+  #price_slider_holder > div > input, #price_slider_holder > div > button{
+    width:100%!important;
+    margin:.5rem 0 !important;
+    text-align: left!important;
+  }
+}
+/* Styling voor de categorieën display op de producten pagina  start */
+
+.specificeren{
+  min-width: 250px;
+  display: flex;
+  background-color: #e9ecef;
+  word-break:break-word;
+  border-right:1px solid #ccc;
+  height:100%;
+}
+.extraZoeken > a{
+  margin-bottom:5px !important;
+  float:left;
+}
+.extraZoeken > a:hover{
+  text-decoration: none;
+  font-weight:bold;
+}
+.extraZoeken > a > span{
+  border-bottom: 1px solid #88B04B;
+}
+/* Einde */
+/* Styling filter aanpassingen op de producten pagina einde */
+
+.message{
+  margin-left: 20%;
+margin-right: 20%;
+top: 80px;
+left: 0;
+right: 0;
+z-index: 100000;
+}
+
+
+.smallCategory{
+  display: none;
+}
+
+@media (max-width: 950px){
+  .specificeren{
+    display: none;
+  }
+
+  .smallCategory{
+    display:block;
+    position: relative;
+  }
+
+  .artikelen{
+    width: 100% !important;
+  }
+
+  .resize{
+    width: 100% !important;
+  }
+
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  border-bottom:1px solid #ccc;
+}
+
+.artikelen{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.artikelen > article{
+  margin: auto;
+}
+
+.item-showcased article{
+  height: auto;
+}
+
+.loginPage {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: url("/img/veiling.jpg") no-repeat center center;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url("/img/veiling.jpg");
+}
+
+.registerPage{
+  display: flex;
+  align-items: center;
+  background: url("/img/veiling.jpg") no-repeat center center;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url("/img/veiling.jpg");
+}
+
+.voorwaardenPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/img/han.jpg) no-repeat center center;
+  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.5) 100%), url("/img/han.jpg");
+  height: 71.95vh;
+}
+
+.voorwaardenOutside{
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  align-items: center;
+  justify-content: center;
+  width: 70vw;
+  padding: 1vw 1vh;
+  background-color: #BCB8B1;
+  border: 1px solid #463F3A;
+}
+
+.contactOutside {
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw 1vh;
+  background-color: #BCB8B1;
+  border: 1px solid #463F3A;
+}
+
+.voorwaardenInside{
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.mw-50{
+  max-width: 50%;
+}
+
+.voorwaardenInside ol{
+  margin-top: 0.5vh;
+}
+
+.voorwaardenInside h1{
+  margin-bottom: 1vh;
+  word-break: break-all;
+}
+
+.contactPagina ul{
+  list-style: none;
+  padding: 1vh 1vw;
+}
+
+/* Footer design changes start */
+.footer {
+  border-top:1px solid #ccc;
+  background-color:#e9ecef!important;
+}
+
+.footerContent {
+  max-width:700px;
+}
+.footerContent > div{
+  width:33%;
+}
+
+.footer p{
+  margin: 0;
+}
+/* Einde footer design changes */
+
+.form_error span {
+  font-size: 1.2em;
+  color: #D83D5A;
+}
+.form_error input {
+  border: 1px solid #D83D5A;
+}
+
+.dropdown.bootstrap-select.position-absolute.nav-select{
+  z-index: 100;
+}
+
+.bootstrap-datetimepicker-widget .btn{
+  background-color: white;
+  color: blue;
+}
+
+.bootstrap-datetimepicker-widget .btn:hover{
+  background-color: white;
+  color: blue;
+}
+
+
+
+.badge{
+  z-index: 2;
+  margin-left: -7px;
+  margin-right: -15px;
+  margin-top: -5px;
+  position: relative;
+}
+
+.mw-100{
+  max-width: 100vw !important;
+}
+
+.dropdown.bootstrap-select.nav-select.show {
+  z-index: 10;
+}
+
+/* Prijs slider changes start */
+#b_min_prijs {
+  border-left:1px solid black;
+  padding-left:5px;
+}
+
+#b_max_prijs {
+  border-right:1px solid black;
+  padding-right:5px;
+}
+/* Prijs slider changes einde */
+
+/* Eigen veiling items styling */
+
+.ownItemArticle{
+  background: black;
+  transition: 0.3s;
+}
+
+.ownItem{
+  transition: 0.3s;
+}
+
+.border-radius-0{
+  border-radius: 0;
+}
+
+article:hover .ownItemArticle{
+  transform: scale(1.05) !important;
+}
+
+article:Hover .ownItem{
+  opacity: 0.5;
+  transform: scale(1) !important;
+}
+
+.hoverBtn{
+  display: none;
+  top: 100px;
+}
+.inFront{
+  z-index: 10;
+  width: 300px;
+}
+
+article:hover .hoverBtn{
+  opacity: 1 !important;
+  display: inline;
+}
+.h-carousel{
+  height: 360px;
+}
+
+.p-carousel{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media only screen and (max-width: 576px){
+  .h-carousel{
+    height: 200px;
+  }
+
+  article .hoverBtn{
+    opacity: 1 !important;
+    display: inline;
+  }
+
+  article .ownItem{
+    opacity: 0.5;
+    transform: scale(1) !important;
+  }
+  article .ownItemArticle{
+    transform: scale(1.05) !important;
+  }
+
+  .inFront{
+    z-index: 10;
+    width: 240px;
+  }
+
+  .p-carousel{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+
+/* Eigen veilign items styling end */
+
+
+
+/*  rating style */
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  visibility: hidden;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+/* rating styling end */
+
+/* fixes for dropdown */
+.dropdown-menu .inner .show a{
+  padding-left: 10px;
+  padding-right: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+@media only screen and (max-width: 576px){
+.fullCategory .dropdown-menu.show{
+  max-width: 100vw;
+  min-width: 100vw !important;
+  left: -25vw !important;
+  overflow: hidden;
+}
+}
+
+.dropdown-menu .inner .show li{
+overflow: hidden;
+}
+/*  end fixes for dropdown */

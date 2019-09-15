@@ -1,0 +1,115 @@
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
+<script src="scripts/bootstrap-slider.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+<script>
+  $(document).ready(
+    function(){
+      var min_prijs = document.getElementById("min_prijs");
+      var max_prijs = document.getElementById("max_prijs");
+      if(min_prijs != null && max_prijs != null){
+        document.getElementById("price_slider_holder").style.display = "block";
+        var slider = document.getElementById("price_slider");
+        // Set slider min and max value
+        slider.setAttribute('data-slider-min',Math.floor(min_prijs.value));
+        slider.setAttribute('data-slider-max',Math.ceil(max_prijs.value));
+
+        // Set slider values in textbox below slider
+        document.getElementsByName("min_prijs_text")[0].value = "€ "+ Math.floor(min_prijs.value);
+        document.getElementsByName("max_prijs_text")[0].value = "€ "+ Math.ceil(max_prijs.value);
+
+        // Set selected values for slider
+        slider.setAttribute('data-slider-value',"["+ Math.floor(min_prijs.value) +","+ Math.ceil(max_prijs.value)+"]");
+        document.getElementById("b_min_prijs").innerHTML = "&euro; "+ Math.floor(min_prijs.value);
+        document.getElementById("b_max_prijs").innerHTML = "&euro; "+ Math.ceil(max_prijs.value)
+        $("#price_slider").slider({});
+      }
+
+      var price_slider = document.getElementById('price_slider');
+      if(price_slider != null){
+        price_slider.onchange = function(){
+          var prijzen_string = this.value;
+          prijzen_string = prijzen_string.replace("[","");
+          var prijzen = prijzen_string.split(",");
+          document.getElementsByName("min_prijs_text")[0].value = "€ "+ prijzen[0];
+          document.getElementsByName("max_prijs_text")[0].value = "€ "+ prijzen[1];
+        };
+      }
+      
+      var filer_hide_imgs = document.getElementsByClassName('filter-hide-img');
+      for(let img of filer_hide_imgs){
+        if(window.matchMedia("(max-width: 1000px)").matches){
+          img.parentElement.classList.remove('active');
+        }
+        img.addEventListener("click",function(){
+          img.parentElement.classList.remove('active');
+        });
+      }
+      var filter_show_imgs = document.getElementsByClassName('filter-show-img');
+      for(let img of filter_show_imgs){
+        img.addEventListener("click",function(){
+          img.parentElement.classList.add('active');
+        });
+      }
+
+      // Update the count down every 1 second
+    var x = setInterval(function() {
+      var timers = document.querySelectorAll('#timer');
+      for(var i = 0; i < timers.length; i++){ 
+        var countDownDate = timers[i].getAttribute('data-time'); 
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+      
+        // Find the distance between now and the count down date
+        var distance = countDownDate;
+      
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = ('00'+Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).slice(-2);
+        var seconds = ('00'+Math.floor((distance % (1000 * 60)) / 1000)).slice(-2);
+      
+        // Display the result in the element with id="demo"
+        timers[i].innerHTML = days + " dagen " + hours + ":"
+        + minutes + ":" + seconds + "";
+        distance -= 1000;
+        timers[i].setAttribute('data-time',distance);
+      
+        // If the count down is finished, write some text 
+        if (distance < 0) {
+          timers[i].innerHTML = "Veiling verlopen";
+        }
+      }
+    }, 1000);
+    
+
+  
+});
+$(function () {
+      $('#datetimepicker7').datetimepicker({
+        locale: 'nl',
+        minDate: moment()
+      });
+      $('#datetimepicker8').datetimepicker({
+          useCurrent: false,
+          locale: 'nl'
+      });
+      $("#datetimepicker7").on("change.datetimepicker", function (e) {
+          $('#datetimepicker8').datetimepicker('minDate', e.date);
+      });
+      $("#datetimepicker8").on("change.datetimepicker", function (e) {
+          $('#datetimepicker7').datetimepicker('maxDate', e.date);
+      });
+  });
+$("#message").modal();
+</script>
